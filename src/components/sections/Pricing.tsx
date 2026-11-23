@@ -22,15 +22,15 @@ export function Pricing() {
             <Reveal key={p.name} delay={i * 100}>
               <Card
                 className={cn(
-                  "glow-card relative h-full border bg-card/70",
+                  "glow-card relative h-full overflow-visible border bg-card/70",
                   p.featured
-                    ? "border-cyan/60 bg-gradient-to-b from-primary/20 to-card shadow-[0_20px_60px_-20px_rgb(0_229_255/0.5)] md:-translate-y-3"
+                    ? "border-cyan/60 pt-8 bg-gradient-to-b from-primary/20 to-card shadow-[0_20px_60px_-20px_rgb(0_229_255/0.5)] md:-translate-y-3"
                     : "border-border",
                 )}
               >
                 {p.featured && (
-                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 gap-1 bg-gradient-brand px-3 py-1 text-white">
-                    <Star className="size-3.5 fill-current" /> Más popular
+                  <Badge className="absolute top-0 left-1/2 z-10 h-auto -translate-x-1/2 -translate-y-1/2 gap-1.5 border-amber-300 bg-gradient-brand px-3.5 py-1.5 text-sm font-semibold text-white shadow-[0_6px_20px_-6px_rgb(0_229_255/0.7)] [&>svg]:size-3.5!">
+                    <Star className="fill-current" /> Más popular
                   </Badge>
                 )}
                 <CardHeader>
